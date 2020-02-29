@@ -32,13 +32,22 @@ const Schedule = styled.div`
   grid-auto-rows: 150px;
 `
 
+const Week = styled.div`
+  display: flex;
+
+  span {
+    flex: 1;
+    text-align: center;
+  }
+`
+
 const Day = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
-  color: #696969;
+  color: ${props => (props.disabled ? '#DDD' : '#696969')};
 
   &:hover {
     background-color: #ddd;
@@ -46,4 +55,13 @@ const Day = styled.span`
   }
 `
 
-export { Container, Header, ArrowLeft, ArrowRight, MonthName, Schedule, Day }
+export {
+  Container,
+  Header,
+  ArrowLeft,
+  ArrowRight,
+  MonthName,
+  Week,
+  Schedule,
+  Day,
+}
