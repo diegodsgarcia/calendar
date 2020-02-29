@@ -1,7 +1,15 @@
-import React from "react";
+import React from 'react'
+import GlobalStyle from './styles/global'
+
+import Calendar from './components/Calendar'
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <GlobalStyle />
+      <Calendar />
+    </>
+  )
 }
 
-export default App;
+export default App
