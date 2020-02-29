@@ -54,7 +54,9 @@ function Calendar() {
     <S.Container>
       <S.Header>
         <S.ArrowLeft onClick={prevMonth} />
-        <S.MonthName>{pt.localize.month(getMonth(date))}</S.MonthName>
+        <S.MonthName>
+          {pt.localize.month(getMonth(date))} - {date.getFullYear()}
+        </S.MonthName>
         <S.ArrowRight onClick={nextMonth} />
       </S.Header>
       <S.Week>
